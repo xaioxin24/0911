@@ -1,26 +1,19 @@
 import time
 
-def logger(msg):
-    def time_master(func):
-        def call_func():
-            start = time.time()
-            func()
-            stop = time.time()
-            print(f"[{msg}]一共耗费了{(stop-start):2f}")
-        return call_func
-    return time_master
+def time_master(func):
+    def call_func():
+        print("开始运行程序")
+        start = time.time()
+        func()
+        stop = time.time()
+        print("结束程序运行...")
+        print(f"一共消耗了{(stop-stop):.2f}秒。")
+    return call_func
 
-def funA():
-    time.sleep(1)
-    print("正在调用funA")
+def myfunc():
+    time.sleep(2)
+    print("python3")
 
-def funB():
-    time.sleep(1)
-    priny("正在调用funB...")
+myfunc = time_master(myfunc)
 
-
-funA = logger(msg="A")(funA)
-funB = logger(msg="B")(funB)
-
-funA()
-funB()
+myfunc()
