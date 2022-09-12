@@ -1,8 +1,12 @@
 #1.导入进程包
-improt time
+improt multiprocessing
+import time
+import os
 
 #唱歌
 def sing(num,name):
+    print("唱歌进程的pid：",os.getpid())
+    print("唱歌进程的父进程pid：",os.getppid())
     for i in range(num):
         print(name)
         print("唱歌...")
@@ -10,6 +14,8 @@ def sing(num,name):
         
 #跳舞   
 def dance(num,name):
+    print("跳舞进程的pid:",os.getpid())
+    print("跳舞进程的父进程的pid:",os.getppid())
     for i in range(num):
         print(name)
         print("跳舞...")
@@ -17,6 +23,7 @@ def dance(num,name):
         
         
 if __name__ == '__main__':
+    print("跳舞进程的pid:",os.getpid())
     #2.使用进程类创建进程对象
     #  target: 指定进程执行的函数名
     # args: 使用元组方式给指定任务传参
@@ -33,6 +40,9 @@ if __name__ == '__main__':
     sing_process.start()
     dance_process.start()
     
-
+单任务
+使用多进程实现多任务
+进程执行带有参数的任务
+获取进程的编号
         
         
