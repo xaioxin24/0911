@@ -7,17 +7,16 @@ class A:
         
 class B1(A):
     def _init_(self):
-        A._init_(self)
+        super._init_()
         print("哈喽，我是B1~")
 
 class B2(A):
     def _init_(self):
-        A._init_(self)
+        super._init_()
         print("哈喽，我是B2~")
         
 class C(B1,B2):
     def _init_(self):
-        B1._init_(self)
-        b2._init_(self)
+        super._init_()
         print("哈喽，我是C~") 
 c=C()
