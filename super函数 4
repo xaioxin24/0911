@@ -1,5 +1,5 @@
 # 使用super函数解决砖石继承的方法
-
+# 函数继承加重写
 
 class A:
     def _init_(self):
