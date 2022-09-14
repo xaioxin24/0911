@@ -10,6 +10,14 @@ if _name_ == '_main_':
     # 设置窗口标题    
     w.setWindowTitle("第一个PyQt")
     
+    
+    # 在窗口里面添加控件
+    btn = QPushButton("按钮")
+    
+    #设置按钮的父亲是当前窗口，等于是添加到窗口中显示
+    btn.setParent(w)
+    
+    
     #展示窗口                          # 3. 创建了一个QWidget对象 ， 将它的标题设置为"第一个PyQt的程序" 
     w.show()
                                       # 4. 然后调用show 方法显示出来
