@@ -1,4 +1,4 @@
-#1.导入进程包
+#1.导入进程包    执行带有参数的任务
 import multiprocessing
 import time
 import os
