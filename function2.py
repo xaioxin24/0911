@@ -1,3 +1,4 @@
+#设置类的多态
 class shape:
     def _init_(self, name):
         self.name = name
